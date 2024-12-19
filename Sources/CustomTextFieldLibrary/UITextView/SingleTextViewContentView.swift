@@ -9,7 +9,7 @@ import Foundation
 import UIKit
 import SnapKit
 
-class SingleTextViewContentView: UIView {
+public class SingleTextViewContentView: UIView {
     
     public var textView: SingleTextView?
     
@@ -67,7 +67,7 @@ class SingleTextViewContentView: UIView {
         
     }
     
-    override func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
+    override public func observeValue(forKeyPath keyPath: String?, of object: Any?, change: [NSKeyValueChangeKey : Any]?, context: UnsafeMutableRawPointer?) {
            if keyPath == "contentSize" {
                DispatchQueue.main.async {
                    self.updateHeight()
@@ -98,7 +98,7 @@ class SingleTextViewContentView: UIView {
     
   
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
     }
     
